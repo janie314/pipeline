@@ -13,6 +13,7 @@ class NetworkWorld
         tweet: tweet.text
       })
     end
+    FileUtils.mkdir_p(File.join(__dir__, "../../data/imports"))
     File.write(File.join(__dir__, "../../data/imports/networkworld.json"), data.to_json)
   end
 end

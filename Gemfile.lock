@@ -138,7 +138,6 @@ GEM
       lint_roller (~> 1.0)
       rubocop-rails (~> 2.26.0)
     stringio (3.1.5)
-    thor (1.3.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.1.4)
@@ -155,7 +154,6 @@ DEPENDENCIES
   http (~> 5.2)
   nokogiri (~> 1.18)
   peppermint (~> 0.1.19)
-  thor (~> 1.3)
 
 BUNDLED WITH
    2.6.2
