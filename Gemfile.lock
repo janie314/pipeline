@@ -24,6 +24,7 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.0)
+    csv (3.3.2)
     date (3.4.1)
     domain_name (0.6.20240107)
     drb (2.2.1)
@@ -121,6 +122,8 @@ GEM
       sorbet-runtime (>= 0.5.10782)
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
+    semantic_logger (4.16.1)
+      concurrent-ruby (~> 1.0)
     sorbet-runtime (0.5.11851)
     standard (1.45.0)
       language_server-protocol (~> 3.17.0.2)
@@ -151,9 +154,11 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  csv (~> 3.3)
   http (~> 5.2)
   nokogiri (~> 1.18)
   peppermint (~> 0.1.19)
+  semantic_logger (~> 4.16)
 
 BUNDLED WITH
    2.6.2
