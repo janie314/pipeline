@@ -14,6 +14,6 @@ class NetworkWorld
         tweet: tweet.text
       })
     end
-    import_to_json "networkworld"
+    import_to_json("networkworld", data)
   end
 end
