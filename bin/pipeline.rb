@@ -1,5 +1,6 @@
 require "thor"
 require_relative "../lib/imports/networkworld"
+require_relative "../lib/consts"
 
 class Pipeline < Thor
   no_commands do
@@ -13,10 +14,9 @@ class Pipeline < Thor
     NetworkWorld.new.run
   end
 
-  private
-
-  def f
-    puts "Pipeline started!"
+  desc "version", "Prints current version"
+  def version
+    puts VERSION
   end
 end
 
