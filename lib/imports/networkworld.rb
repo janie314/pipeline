@@ -18,5 +18,6 @@ class NetworkWorld
       })
     end
     Import.csv("networkworld", data)
+    data
   end
 end

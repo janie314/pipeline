@@ -25,6 +25,6 @@ class Import
       end
     end
     htmlpath = File.join(__dir__, "../data/imports", "#{name}.html")
-    system "csvtotable", csvpath, htmlpath
+    system "csvtotable", "-o", csvpath, htmlpath
   end
 end
