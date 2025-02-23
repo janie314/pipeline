@@ -5,6 +5,7 @@ require_relative "lib/consts"
 desc "Installs dependencies"
 task :deps do
   sh "pip install --upgrade csvtotable"
+  sh "pip install --upgrade csv2md"
 end
 
 desc "Starts the pipeline"

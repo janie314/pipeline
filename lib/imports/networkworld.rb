@@ -17,7 +17,7 @@ class NetworkWorld
         tweet: tweet.text
       })
     end
-    Import.csv("networkworld", data)
+    Import.all("networkworld", data)
     data
   end
 end
