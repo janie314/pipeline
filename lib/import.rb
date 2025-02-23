@@ -31,14 +31,14 @@ class Import
       end
     end
     htmlpath = File.join(__dir__, "../data/imports", name, "#{name}.html")
-    system "csvtotable", "-o", csvpath, htmlpath
+    system "uv", "run", "csvtotable", "-o", csvpath, htmlpath
   end
 
   def self.markdown(name, data)
     log.info "importing #{name} into markdown"
     csvpath = File.join(__dir__, "../data/imports", name, "#{name}.csv")
     mdpath = File.join(__dir__, "../data/imports", name, "#{name}.md")
-    md = IO.popen(["csv2md", csvpath]) do |io|
+    md = IO.popen(["uv", "run", "csv2md", csvpath]) do |io|
       io.read
     end
     File.write(mdpath, md)
