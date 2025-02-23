@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Check out this repo
       uses: actions/checkout@v4
+    - name: setup uv (python)
+      uses: astral-sh/setup-uv@v5
     - name: setup ruby
       uses: ruby/setup-ruby@v1
       with:
