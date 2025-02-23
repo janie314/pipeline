@@ -8,4 +8,4 @@ gem "thor", "~> 1.3"
 
 gem "http", "~> 5.2"
 
-gem "httparty", "~> 0.22.0"
+gem "nokogiri", "~> 1.18"
