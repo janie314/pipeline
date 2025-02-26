@@ -1,5 +1,17 @@
 | datetime                  | tweet                                                                                                                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2025-02-26T09:10:00+00:00 | ⚡️🔌
+El creixement dels centres de dades implica una pressió sense precedents a les xarxes elèctriques, via @NetworkWorld 
+
+@MariaKorolov #datacenters
+networkworld.com/article/380…                            |
+| 2025-02-26T08:17:00+00:00 | ⚡️🔌
+Data center growth puts unprecedented pressure on #power grids, via @NetworkWorld 
+
+@MariaKorolov #energy
+networkworld.com/article/380…                                                                    |
+| 2025-02-26T07:13:00+00:00 | AI, automation spur efforts to upskill network pros trib.al/d8ApaWD                                                                                                                                            |
+| 2025-02-26T05:08:00+00:00 | Cisco, Nvidia expand AI partnership to include Silicon One technology trib.al/kHXdcjp                                                                                                                          |
 | 2025-02-25T21:18:00+00:00 | IBM targets AI application growth with DataStax buy trib.al/W5fGZRw                                                                                                                                            |
 | 2025-02-25T14:19:00+00:00 | Alibaba to invest $52 billion in AI and cloud over three years trib.al/reKEkCH                                                                                                                                 |
 | 2025-02-25T09:40:00+00:00 | 3 strategies for carbon-free data centers trib.al/qLSnRb8                                                                                                                                                      |
@@ -11,6 +23,3 @@
 | 2025-02-21T16:35:00+00:00 | Aryaka adds AI-powered observability to SASE platform trib.al/twcb3Ct                                                                                                                                          |
 | 2025-02-21T05:07:00+00:00 | More used Seagate HDDs disguised as new: Fraudsters make it tough to spot the difference trib.al/4ozkrAQ                                                                                                       |
 | 2025-02-20T14:34:00+00:00 | Versa Networks launches sovereign SASE, challenging cloud-only security model trib.al/RtRyaf1                                                                                                                  |
-| 2025-02-20T08:08:00+00:00 | Ireland says there will be no computation without generation trib.al/jmhZR6C                                                                                                                                   |
-| 2025-02-20T05:08:00+00:00 | Fortinet speeds threat detection with improved FortiAnalyzer trib.al/lMxMrub                                                                                                                                   |
-| 2025-02-19T16:16:00+00:00 | Microsoft braids anyons into topological cubits on new Majorana quantum chip trib.al/Mnva1ow                                                                                                                   |
