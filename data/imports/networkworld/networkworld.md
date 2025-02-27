@@ -1,30 +1,30 @@
-| datetime                  | tweet                                                                                                                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2025-02-26T14:48:00+00:00 | Red Hat OpenShift 4.18 expands cloud-native networking trib.al/NevHXtd                                                                                                                                         |
+| datetime                  | tweet                                                                                                                                                                                                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2025-02-26T23:30:00+00:00 | As the demand for #DataCenters skyrockets, securing #sustainable #power is becoming a bigger challenge. #UptimeIntelligence recently shared three strategies for powering new facilities with low-carbon energy. Read more in @NetworkWorld: okt.to/p0FkP8 |
+| 2025-02-26T14:48:00+00:00 | Red Hat OpenShift 4.18 expands cloud-native networking trib.al/NevHXtd                                                                                                                                                                                     |
 | 2025-02-26T10:26:00+00:00 | ⚡️🔌
 El crecimiento de los centros de datos ejerce una presión sin precedentes sobre las redes eléctricas, vía @NetworkWorld 
 
 @MariaKorolov #energía
-networkworld.com/article/380…                             |
+networkworld.com/article/380…                                                                         |
 | 2025-02-26T09:10:00+00:00 | ⚡️🔌
 El creixement dels centres de dades implica una pressió sense precedents a les xarxes elèctriques, via @NetworkWorld 
 
 @MariaKorolov #datacenters
-networkworld.com/article/380…                            |
+networkworld.com/article/380…                                                                        |
 | 2025-02-26T08:17:00+00:00 | ⚡️🔌
 Data center growth puts unprecedented pressure on #power grids, via @NetworkWorld 
 
 @MariaKorolov #energy
-networkworld.com/article/380…                                                                    |
-| 2025-02-26T07:13:00+00:00 | AI, automation spur efforts to upskill network pros trib.al/d8ApaWD                                                                                                                                            |
-| 2025-02-26T05:08:00+00:00 | Cisco, Nvidia expand AI partnership to include Silicon One technology trib.al/kHXdcjp                                                                                                                          |
-| 2025-02-25T21:18:00+00:00 | IBM targets AI application growth with DataStax buy trib.al/W5fGZRw                                                                                                                                            |
-| 2025-02-25T14:19:00+00:00 | Alibaba to invest $52 billion in AI and cloud over three years trib.al/reKEkCH                                                                                                                                 |
-| 2025-02-25T09:40:00+00:00 | 3 strategies for carbon-free data centers trib.al/qLSnRb8                                                                                                                                                      |
-| 2025-02-25T04:31:00+00:00 | Questions arise about reasons why Microsoft has cancelled data center lease plans trib.al/u9BNRdY                                                                                                              |
-| 2025-02-24T18:35:00+00:00 | Intel targets edge, high-performance computing with extended Xeon 6 chip line trib.al/QRqwLUx                                                                                                                  |
+networkworld.com/article/380…                                                                                                                |
+| 2025-02-26T07:13:00+00:00 | AI, automation spur efforts to upskill network pros trib.al/d8ApaWD                                                                                                                                                                                        |
+| 2025-02-26T05:08:00+00:00 | Cisco, Nvidia expand AI partnership to include Silicon One technology trib.al/kHXdcjp                                                                                                                                                                      |
+| 2025-02-25T21:18:00+00:00 | IBM targets AI application growth with DataStax buy trib.al/W5fGZRw                                                                                                                                                                                        |
+| 2025-02-25T14:19:00+00:00 | Alibaba to invest $52 billion in AI and cloud over three years trib.al/reKEkCH                                                                                                                                                                             |
+| 2025-02-25T09:40:00+00:00 | 3 strategies for carbon-free data centers trib.al/qLSnRb8                                                                                                                                                                                                  |
+| 2025-02-25T04:31:00+00:00 | Questions arise about reasons why Microsoft has cancelled data center lease plans trib.al/u9BNRdY                                                                                                                                                          |
+| 2025-02-24T18:35:00+00:00 | Intel targets edge, high-performance computing with extended Xeon 6 chip line trib.al/QRqwLUx                                                                                                                                                              |
 | 2025-02-22T03:22:00+00:00 | Need a quick way to check disk space in Linux? 🐧 Sandra Henry-Stocker explains the DU command in the latest #2MinuteLinuxTips. Watch now and explore more Linux tips here: trib.al/149kOr7
- #Linux #OpenSource |
-| 2025-02-21T17:37:00+00:00 | Do data centers threaten the water supply? trib.al/wxG55EN                                                                                                                                                     |
-| 2025-02-21T16:35:00+00:00 | Aryaka adds AI-powered observability to SASE platform trib.al/twcb3Ct                                                                                                                                          |
-| 2025-02-21T05:07:00+00:00 | More used Seagate HDDs disguised as new: Fraudsters make it tough to spot the difference trib.al/4ozkrAQ                                                                                                       |
+ #Linux #OpenSource                                             |
+| 2025-02-21T17:37:00+00:00 | Do data centers threaten the water supply? trib.al/wxG55EN                                                                                                                                                                                                 |
+| 2025-02-21T16:35:00+00:00 | Aryaka adds AI-powered observability to SASE platform trib.al/twcb3Ct                                                                                                                                                                                      |
