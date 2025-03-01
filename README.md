@@ -1,8 +1,6 @@
 # pipeline
 
-A template [git scraping](https://simonwillison.net/2020/Oct/9/git-scraping/)
-data pipeline, written in Ruby.
+`docker compose up`
 
-Put imports in `lib/imports/`, following the example here.
-
-Data ends up in `data/imports/`.
+docker exec -it container-name bash and run these
+https://superset.apache.org/docs/installation/pypi
