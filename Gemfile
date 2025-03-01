@@ -11,3 +11,5 @@ gem "nokogiri", "~> 1.18"
 gem "csv", "~> 3.3"
 
 gem "semantic_logger", "~> 4.16"
+
+gem "sqlite3", "~> 2.6"
