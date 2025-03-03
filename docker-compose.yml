@@ -1,25 +1,10 @@
 services:
   superset:
+    container_name: superset02
     image: apache/superset
     ports:
       - "8088:8088"
+    environment: 
+      FLASK_APP: superset
     env_file:
       - .env 
-  postgres:
-    image: postgres:latest
-    hostname: postgres
-    environment:
-      POSTGRES_USER: grafana
-      POSTGRES_DB: grafanaappdb
-      POSTGRES_PASSWORD: mysecretpassword
-    networks:
-      - metanet1
-    ports:
-      - 5432:5432
-    volumes:
-      - superset_storage_pg:/var/lib/postgresql/data
-networks:
-  metanet1:
-    driver: bridge
-volumes:
-  superset_storage_pg:

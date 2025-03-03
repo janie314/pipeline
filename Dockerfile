@@ -1,11 +1,7 @@
-FROM rockylinux:9
+FROM apache/superset
 
-# Install necessary packages
-RUN dnf update -y && \
-    dnf install -y git docker gcc g++ python3-devel && \
-    dnf clean all
-
-RUN /usr/bin/python3 -m pip install --upgrade apache-superset
+# RUN apt-get update -y && \
+ #   apt-get upgrade -y
 
 WORKDIR /app
 
