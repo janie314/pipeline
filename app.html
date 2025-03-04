@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Editor</title>
+    <style>
+        body { font-family: sans-serif; }
+        #graphCanvas { border: 1px solid #ccc; }
+        .vertex { cursor: grab; } /* Change cursor for draggable vertices */
+        .vertex.dragging { cursor: grabbing; } /* Change cursor while dragging */
+        .vertex.selected { stroke: blue; stroke-width: 3; }
+        .edge { stroke: black; stroke-width: 2; }
+        #controls { margin-bottom: 10px; }
+        #vertexProperties { margin-top: 10px; border: 1px solid #eee; padding: 10px; display: none; }
+        #loadFileInput { display: none; } /* Hide file input */
+    </style>
+</head>
+<body>
+
+    <h1>Graph Editor</h1>
+
+    <div id="controls">
+        <button id="addVertexButton">Add Vertex</button>
+        <button id="addEdgeButton">Add Edge (Select vertices first)</button>
+        <button id="saveGraphButton">Save Graph</button>
+        <button id="loadGraphButton">Load Graph</button> <input type="file" id="loadFileInput" accept=".json">
+        <span id="status"></span>
+    </div>
+
+    <svg id="graphCanvas" width="600" height="400"></svg>
+
+    <div id="vertexProperties">
+        <h2>Vertex Properties</h2>
+        <label for="vertexName">Name:</label>
+        <input type="text" id="vertexName" placeholder="Vertex Name"><br><br>
+        <label for="vertexSqlCode">SQL Code:</label>
+        <textarea id="vertexSqlCode" placeholder="Enter SQL code"></textarea><br><br>
+        <button id="updateVertexButton" disabled>Update Vertex</button>
+        <button id="deleteVertexButton" disabled>Delete Vertex</button>
+    </div>
+
+    <script>
+        const graphCanvas = document.getElementById('graphCanvas');
+        const addVertexButton = document.getElementById('addVertexButton');
+        const addEdgeButton = document.getElementById('addEdgeButton');
+        const saveGraphButton = document.getElementById('saveGraphButton');
+        const loadGraphButton = document.getElementById('loadGraphButton');
+        const loadFileInput = document.getElementById('loadFileInput');
+        const statusSpan = document.getElementById('status');
+
+        const vertexPropertiesDiv = document.getElementById('vertexProperties');
+        const vertexNameInput = document.getElementById('vertexName');
+        const vertexSqlCodeInput = document.getElementById('vertexSqlCode');
+        const updateVertexButton = document.getElementById('updateVertexButton');
+        const deleteVertexButton = document.getElementById('deleteVertexButton');
+
+        let vertices = [];
+        let edges = [];
+        let nextVertexId = 0;
+        let selectedVertexId = null;
+        let isAddingEdge = false;
+        let edgeStartVertexId = null;
+
+        let draggingVertexId = null; // Track vertex being dragged
+        let dragOffsetX = 0; // Offset within the vertex during drag start
+        let dragOffsetY = 0;
+
+
+        function createVertex(x, y, vertexData = null) { // Added vertexData for loading
+            const vertexId = vertexData ? vertexData.id : nextVertexId++;
+            const vertex = {
+                id: vertexId,
+                x: x,
+                y: y,
+                name: vertexData ? vertexData.name : `Vertex ${vertexId}`,
+                sqlCode: vertexData ? vertexData.sqlCode : '',
+            };
+            vertices.push(vertex);
+
+            const vertexElement = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+            vertexElement.setAttribute('cx', x);
+            vertexElement.setAttribute('cy', y);
+            vertexElement.setAttribute('r', 10);
+            vertexElement.setAttribute('class', 'vertex');
+            vertexElement.setAttribute('data-vertex-id', vertexId);
+            vertexElement.addEventListener('click', selectVertex);
+
+            vertexElement.addEventListener('mousedown', startDragVertex); // Add drag event listeners
+            vertexElement.addEventListener('mouseup', stopDragVertex);
+            vertexElement.addEventListener('mouseleave', stopDragVertex);
+
+
+            graphCanvas.appendChild(vertexElement);
+
+            return vertex;
+        }
+
+        function createEdge(startVertexId, endVertexId, edgeData = null) { // Added edgeData for loading
+            const startVertex = vertices.find(v => v.id === startVertexId);
+            const endVertex = vertices.find(v => v.id === endVertexId);
+            if (!startVertex || !endVertex) return null;
+
+            const edge = {
+                startVertexId: startVertexId,
+                endVertexId: endVertexId
+            };
+            edges.push(edge);
+
+            const edgeElement = document.createElementNS("http://www.w3.org/2000/svg", 'line');
+            edgeElement.setAttribute('x1', startVertex.x);
+            edgeElement.setAttribute('y1', startVertex.y);
+            edgeElement.setAttribute('x2', endVertex.x);
+            edgeElement.setAttribute('y2', endVertex.y);
+            edgeElement.setAttribute('class', 'edge');
+            edgeElement.setAttribute('data-start-vertex-id', startVertexId);
+            edgeElement.setAttribute('data-end-vertex-id', endVertexId);
+            graphCanvas.appendChild(edgeElement);
+
+            return edge;
+        }
+
+        function redrawEdges() {
+            edges.forEach(edge => {
+                const edgeElement = graphCanvas.querySelector(`.edge[data-start-vertex-id="${edge.startVertexId}"][data-end-vertex-id="${edge.endVertexId}"]`);
+                if (edgeElement) {
+                    const startVertex = vertices.find(v => v.id === edge.startVertexId);
+                    const endVertex = vertices.find(v => v.id === edge.endVertexId);
+                    if (startVertex && endVertex) {
+                        edgeElement.setAttribute('x1', startVertex.x);
+                        edgeElement.setAttribute('y1', startVertex.y);
+                        edgeElement.setAttribute('x2', endVertex.x);
+                        edgeElement.setAttribute('y2', endVertex.y);
+                    }
+                }
+            });
+        }
+
+        function selectVertex(event) {
+            if (draggingVertexId !== null) return; // Prevent selection during drag
+
+            const vertexElement = event.target;
+            const vertexId = parseInt(vertexElement.getAttribute('data-vertex-id'));
+
+            if (isAddingEdge) {
+                if (edgeStartVertexId === null) {
+                    edgeStartVertexId = vertexId;
+                    statusSpan.textContent = 'Select the second vertex for the edge.';
+                    vertexElement.classList.add('selected'); // Visual feedback for first selected vertex
+                } else if (edgeStartVertexId !== vertexId) {
+                    createEdge(edgeStartVertexId, vertexId);
+                    isAddingEdge = false;
+                    edgeStartVertexId = null;
+                    statusSpan.textContent = 'Edge added.';
+                    vertices.forEach(v => {
+                        const vElement = graphCanvas.querySelector(`.vertex[data-vertex-id="${v.id}"]`);
+                        if (vElement) vElement.classList.remove('selected'); // Clear selection
+                    });
+
+                } else {
+                    statusSpan.textContent = 'Cannot create edge to the same vertex. Select another vertex.';
+                }
+                return; // Exit to prevent vertex selection logic in edge mode
+            }
+
+
+            if (selectedVertexId !== null) {
+                const previouslySelectedVertex = graphCanvas.querySelector(`.vertex[data-vertex-id="${selectedVertexId}"]`);
+                if (previouslySelectedVertex) {
+                    previouslySelectedVertex.classList.remove('selected');
+                }
+            }
+
+            selectedVertexId = vertexId;
+            vertexElement.classList.add('selected');
+
+            const selectedVertexData = vertices.find(v => v.id === selectedVertexId);
+            if (selectedVertexData) {
+                vertexNameInput.value = selectedVertexData.name;
+                vertexSqlCodeInput.value = selectedVertexData.sqlCode;
+                vertexPropertiesDiv.style.display = 'block';
+                updateVertexButton.disabled = false;
+                deleteVertexButton.disabled = false;
+            }
+        }
+
+        function updateSelectedVertex() {
+            if (selectedVertexId === null) return;
+            const vertex = vertices.find(v => v.id === selectedVertexId);
+            if (vertex) {
+                vertex.name = vertexNameInput.value;
+                vertex.sqlCode = vertexSqlCodeInput.value;
+                statusSpan.textContent = `Vertex ${vertex.id} updated.`;
+            }
+        }
+
+        function deleteSelectedVertex() {
+            if (selectedVertexId === null) return;
+
+            // Remove vertex from vertices array
+            vertices = vertices.filter(v => v.id !== selectedVertexId);
+
+            // Remove associated edges
+            edges = edges.filter(edge => edge.startVertexId !== selectedVertexId && edge.endVertexId !== selectedVertexId);
+
+            // Remove vertex element from SVG
+            const vertexElement = graphCanvas.querySelector(`.vertex[data-vertex-id="${selectedVertexId}"]`);
+            if (vertexElement) {
+                graphCanvas.removeChild(vertexElement);
+            }
+
+            // Remove associated edge elements from SVG
+            const edgeElements = graphCanvas.querySelectorAll(`.edge[data-start-vertex-id="${selectedVertexId}"], .edge[data-end-vertex-id="${selectedVertexId}"]`);
+            edgeElements.forEach(edgeElement => graphCanvas.removeChild(edgeElement));
+
+            // Redraw remaining edges
+            redrawEdges();
+
+            // Clear selection and hide properties panel
+            selectedVertexId = null;
+            vertexPropertiesDiv.style.display = 'none';
+            updateVertexButton.disabled = true;
+            deleteVertexButton.disabled = true;
+            statusSpan.textContent = 'Vertex deleted.';
+        }
+
+
+        function saveGraph() {
+            const graphData = {
+                vertices: vertices,
+                edges: edges,
+                nextVertexId: nextVertexId // Save nextVertexId to ensure unique IDs on load
+            };
+            const jsonData = JSON.stringify(graphData, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'graph.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            statusSpan.textContent = 'Graph saved to graph.json';
+        }
+
+        function loadGraph(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const graphData = JSON.parse(e.target.result);
+                    if (graphData && graphData.vertices && graphData.edges) {
+                        clearGraph(); // Clear existing graph before loading
+
+                        nextVertexId = graphData.nextVertexId || 0; // Load nextVertexId
+
+                        graphData.vertices.forEach(vertexData => {
+                            createVertex(vertexData.x, vertexData.y, vertexData);
+                        });
+                        graphData.edges.forEach(edgeData => {
+                            createEdge(edgeData.startVertexId, edgeData.endVertexId, edgeData);
+                        });
+
+                        statusSpan.textContent = 'Graph loaded from file.';
+                    } else {
+                        statusSpan.textContent = 'Invalid graph JSON file.';
+                    }
+                } catch (error) {
+                    statusSpan.textContent = 'Error loading graph file: ' + error.message;
+                    console.error('Error loading graph:', error);
+                }
+            };
+            reader.readAsText(file);
+            loadFileInput.value = ''; // Reset file input to allow loading same file again
+        }
+
+        function clearGraph() {
+            vertices = [];
+            edges = [];
+            nextVertexId = 0;
+            selectedVertexId = null;
+            draggingVertexId = null;
+            edgeStartVertexId = null;
+            isAddingEdge = false;
+
+            // Remove all vertex and edge elements from SVG
+            const vertexElements = graphCanvas.querySelectorAll('.vertex');
+            vertexElements.forEach(el => graphCanvas.removeChild(el));
+            const edgeElements = graphCanvas.querySelectorAll('.edge');
+            edgeElements.forEach(el => graphCanvas.removeChild(el));
+
+            vertexPropertiesDiv.style.display = 'none';
+            updateVertexButton.disabled = true;
+            deleteVertexButton.disabled = true;
+            statusSpan.textContent = 'Graph cleared.';
+        }
+
+
+        // --- Drag and Drop Vertex Logic ---
+
+        function startDragVertex(event) {
+            const vertexElement = event.target;
+            draggingVertexId = parseInt(vertexElement.getAttribute('data-vertex-id'));
+            vertexElement.classList.add('dragging'); // Visual feedback
+
+            const rect = vertexElement.getBoundingClientRect(); // Use vertex rect
+            dragOffsetX = event.clientX - rect.left;
+            dragOffsetY = event.clientY - rect.top;
+
+
+            document.addEventListener('mousemove', dragVertex);
+            document.addEventListener('mouseup', stopDragDocument); // Listen on document to catch mouse up outside vertex
+            document.addEventListener('mouseleave', stopDragDocument); // Listen on document to catch mouse leave outside vertex
+
+
+        }
+
+        function dragVertex(event) {
+            if (draggingVertexId === null) return;
+
+            event.preventDefault(); // Prevent text selection during drag
+
+            const vertex = vertices.find(v => v.id === draggingVertexId);
+            const vertexElement = graphCanvas.querySelector(`.vertex[data-vertex-id="${draggingVertexId}"]`);
+            if (vertex && vertexElement) {
+                const rect = graphCanvas.getBoundingClientRect();
+                let newX = event.clientX - rect.left - dragOffsetX;
+                let newY = event.clientY - rect.top - dragOffsetY;
+
+                // Keep vertex within canvas bounds (optional, remove if not desired)
+                const radius = 10; // Vertex radius
+                newX = Math.max(radius, Math.min(rect.width - radius, newX));
+                newY = Math.max(radius, Math.min(rect.height - radius, newY));
+
+
+                vertex.x = newX;
+                vertex.y = newY;
+                vertexElement.setAttribute('cx', newX);
+                vertexElement.setAttribute('cy', newY);
+                redrawEdges(); // Update edges connected to the dragged vertex
+            }
+        }
+
+
+        function stopDragVertex(event) {
+            stopDragging();
+        }
+
+        function stopDragDocument(event) {
+             stopDragging();
+        }
+
+
+        function stopDragging() {
+            if (draggingVertexId !== null) {
+                const vertexElement = graphCanvas.querySelector(`.vertex[data-vertex-id="${draggingVertexId}"]`);
+                if (vertexElement) {
+                    vertexElement.classList.remove('dragging');
+                }
+                draggingVertexId = null;
+
+                document.removeEventListener('mousemove', dragVertex);
+                document.removeEventListener('mouseup', stopDragDocument);
+                document.removeEventListener('mouseleave', stopDragDocument);
+
+            }
+        }
+
+
+        // --- Event Listeners ---
+
+        addVertexButton.addEventListener('click', () => {
+            statusSpan.textContent = 'Click on the canvas to add a vertex.';
+            isAddingEdge = false;
+            edgeStartVertexId = null;
+            stopDragging(); // Cancel drag if active when switching modes
+        });
+
+        addEdgeButton.addEventListener('click', () => {
+            isAddingEdge = true;
+            edgeStartVertexId = null;
+            statusSpan.textContent = 'Select the first vertex for the edge.';
+            stopDragging(); // Cancel drag if active when switching modes
+        });
+
+        saveGraphButton.addEventListener('click', saveGraph);
+        loadGraphButton.addEventListener('click', () => loadFileInput.click()); // Trigger file input click
+        loadFileInput.addEventListener('change', loadGraph);
+
+        updateVertexButton.addEventListener('click', updateSelectedVertex);
+        deleteVertexButton.addEventListener('click', deleteSelectedVertex);
+
+
+        graphCanvas.addEventListener('click', (event) => {
+            if (isAddingEdge) return; // Do not add vertex if adding edge is active
+            if (draggingVertexId !== null) return; // Do not add vertex if dragging
+
+            const rect = graphCanvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            createVertex(x, y);
+            statusSpan.textContent = 'Vertex added.';
+        });
+    </script>
+
+</body>
+</html>
