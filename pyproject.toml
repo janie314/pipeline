@@ -1,0 +1,16 @@
+[project]
+name = "polars01"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "polars>=1.24.0",
+    "structlog>=25.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "pylance>=0.23.2",
+]
