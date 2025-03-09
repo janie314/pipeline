@@ -1,5 +1,5 @@
 from typing import Any, Tuple
-from queries.customers import customers
+from queries.customers import Customers
 
 if __name__ == "__main__":
-    customers()
+    Customers([]).run
