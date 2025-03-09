@@ -1,0 +1,285 @@
+Name,Birth Date
+Tom Cruise,July 3, 1962
+Nicole Kidman,June 20, 1967
+Brad Pitt,December 18, 1963
+Angelina Jolie,June 4, 1975
+Leonardo DiCaprio,November 11, 1974
+Meryl Streep,June 22, 1949
+Denzel Washington,December 28, 1954
+Julia Roberts,October 28, 1967
+George Clooney,May 6, 1961
+Scarlett Johansson,November 22, 1984
+Robert Downey Jr.,April 4, 1965
+Jennifer Aniston,February 11, 1969
+Johnny Depp,June 9, 1963
+Charlize Theron,August 7, 1975
+Will Smith,September 25, 1968
+Natalie Portman,June 9, 1981
+Ryan Reynolds,October 23, 1976
+Emma Stone,November 6, 1988
+Chris Hemsworth,August 11, 1983
+Margot Robbie,July 2, 1990
+Dwayne Johnson,May 2, 1972
+Gal Gadot,April 30, 1985
+Idris Elba,September 6, 1972
+Viola Davis,August 11, 1965
+Keanu Reeves,September 2, 1964
+Sandra Bullock,July 26, 1964
+Hugh Jackman,October 12, 1968
+Cate Blanchett,May 14, 1969
+Daniel Craig,March 2, 1968
+Rachel McAdams,November 17, 1978
+Benedict Cumberbatch,July 19, 1976
+Emily Blunt,February 23, 1983
+Tom Hanks,July 9, 1956
+Oprah Winfrey,January 29, 1954
+Harrison Ford,July 13, 1942
+Steven Spielberg,December 18, 1946
+Paul McCartney,June 18, 1942
+Ringo Starr,July 7, 1940
+Elton John,March 25, 1947
+Madonna,August 16, 1958
+Michael Jackson,August 29, 1958
+Elvis Presley,January 8, 1935
+David Bowie,January 8, 1947
+Freddie Mercury,September 5, 1946
+Beyoncé,September 4, 1981
+Taylor Swift,December 13, 1989
+Lady Gaga,March 28, 1986
+Adele,May 5, 1988
+Justin Bieber,March 1, 1994
+Selena Gomez,July 22, 1992
+Ariana Grande,June 26, 1993
+Drake,October 24, 1986
+Kanye West,June 8, 1977
+Jay-Z,December 4, 1969
+Rihanna,February 20, 1988
+Ed Sheeran,February 17, 1991
+Harry Styles,February 1, 1994
+Zendaya,September 1, 1996
+Timothée Chalamet,December 27, 1995
+Florence Pugh,January 3, 1996
+Saoirse Ronan,April 12, 1994
+Austin Butler,August 17, 1991
+Jacob Elordi,June 26, 1997
+Jenna Ortega,September 27, 2002
+Pedro Pascal,April 2, 1975
+Bella Ramsey,September 30, 2003
+Millie Bobby Brown,February 19, 2004
+Noah Schnapp,October 3, 2004
+Sadie Sink,April 16, 2002
+Gaten Matarazzo,September 8, 2002
+Caleb McLaughlin,October 13, 2001
+Finn Wolfhard,December 23, 2002
+Robert De Niro,August 17, 1943
+Al Pacino,April 25, 1940
+Jack Nicholson,April 22, 1937
+Clint Eastwood,May 31, 1930
+Anthony Hopkins,December 31, 1937
+Morgan Freeman,June 1, 1937
+Ian McKellen,May 25, 1939
+Maggie Smith,December 28, 1934
+Judi Dench,December 9, 1934
+Helen Mirren,July 26, 1945
+Christopher Walken,March 31, 1943
+Jeff Bridges,December 4, 1949
+Sam Elliott,August 9, 1944
+Tommy Lee Jones,September 15, 1946
+Dustin Hoffman,August 8, 1937
+Gene Hackman,January 30, 1930
+Diane Keaton,January 5, 1946
+Jane Fonda,December 21, 1937
+Lily Tomlin,September 1, 1939
+Sissy Spacek,December 25, 1949
+Jessica Lange,April 20, 1949
+Sally Field,November 6, 1946
+Sigourney Weaver,October 8, 1949
+Glenn Close,March 19, 1947
+Susan Sarandon,October 4, 1946
+Meryl Streep,June 22, 1949
+Whoopi Goldberg,November 13, 1955
+Cher,May 20, 1946
+Barbra Streisand,April 24, 1942
+Tina Turner,November 26, 1939
+Aretha Franklin,March 25, 1942
+Celine Dion,March 30, 1968
+Whitney Houston,August 9, 1963
+Stevie Wonder,May 13, 1950
+Prince,June 7, 1958
+Bob Dylan,May 24, 1941
+Bruce Springsteen,September 23, 1949
+Billy Joel,May 9, 1949
+Neil Young,November 12, 1945
+David Gilmour,March 6, 1946
+Roger Waters,September 6, 1943
+Jimmy Page,January 9, 1944
+Robert Plant,August 20, 1948
+Keith Richards,December 18, 1943
+Mick Jagger,July 26, 1943
+Eric Clapton,March 30, 1945
+Bono,May 10, 1960
+Sting,October 2, 1951
+Phil Collins,January 30, 1951
+George Michael,June 25, 1963
+Michael Bolton,February 26, 1953
+Lionel Richie,June 20, 1949
+Mariah Carey,March 27, 1969
+Janet Jackson,May 16, 1966
+Jennifer Lopez,July 24, 1969
+Shakira,February 2, 1977
+Christina Aguilera,December 18, 1980
+Britney Spears,December 2, 1981
+Alicia Keys,January 25, 1981
+Pink,September 8, 1979
+Kelly Clarkson,April 24, 1982
+Avril Lavigne,September 27, 1984
+Katy Perry,October 25, 1984
+Miley Cyrus,November 23, 1992
+Demi Lovato,August 20, 1992
+Nicki Minaj,December 8, 1982
+Cardi B,October 11, 1992
+Megan Thee Stallion,February 15, 1995
+Doja Cat,October 21, 1995
+Billie Eilish,December 18, 2001
+Olivia Rodrigo,February 20, 2003
+Lil Nas X,April 9, 1999
+Name,Birth Date
+Tom Cruise,July 3, 1962
+Nicole Kidman,June 20, 1967
+Brad Pitt,December 18, 1963
+Angelina Jolie,June 4, 1975
+Leonardo DiCaprio,November 11, 1974
+Meryl Streep,June 22, 1949
+Denzel Washington,December 28, 1954
+Julia Roberts,October 28, 1967
+George Clooney,May 6, 1961
+Scarlett Johansson,November 22, 1984
+Robert Downey Jr.,April 4, 1965
+Jennifer Aniston,February 11, 1969
+Johnny Depp,June 9, 1963
+Charlize Theron,August 7, 1975
+Will Smith,September 25, 1968
+Natalie Portman,June 9, 1981
+Ryan Reynolds,October 23, 1976
+Emma Stone,November 6, 1988
+Chris Hemsworth,August 11, 1983
+Margot Robbie,July 2, 1990
+Dwayne Johnson,May 2, 1972
+Gal Gadot,April 30, 1985
+Idris Elba,September 6, 1972
+Viola Davis,August 11, 1965
+Keanu Reeves,September 2, 1964
+Sandra Bullock,July 26, 1964
+Hugh Jackman,October 12, 1968
+Cate Blanchett,May 14, 1969
+Daniel Craig,March 2, 1968
+Rachel McAdams,November 17, 1978
+Benedict Cumberbatch,July 19, 1976
+Emily Blunt,February 23, 1983
+Tom Hanks,July 9, 1956
+Oprah Winfrey,January 29, 1954
+Harrison Ford,July 13, 1942
+Steven Spielberg,December 18, 1946
+Paul McCartney,June 18, 1942
+Ringo Starr,July 7, 1940
+Elton John,March 25, 1947
+Madonna,August 16, 1958
+Michael Jackson,August 29, 1958
+Elvis Presley,January 8, 1935
+David Bowie,January 8, 1947
+Freddie Mercury,September 5, 1946
+Beyoncé,September 4, 1981
+Taylor Swift,December 13, 1989
+Lady Gaga,March 28, 1986
+Adele,May 5, 1988
+Justin Bieber,March 1, 1994
+Selena Gomez,July 22, 1992
+Ariana Grande,June 26, 1993
+Drake,October 24, 1986
+Kanye West,June 8, 1977
+Jay-Z,December 4, 1969
+Rihanna,February 20, 1988
+Ed Sheeran,February 17, 1991
+Harry Styles,February 1, 1994
+Zendaya,September 1, 1996
+Timothée Chalamet,December 27, 1995
+Florence Pugh,January 3, 1996
+Saoirse Ronan,April 12, 1994
+Austin Butler,August 17, 1991
+Jacob Elordi,June 26, 1997
+Jenna Ortega,September 27, 2002
+Pedro Pascal,April 2, 1975
+Bella Ramsey,September 30, 2003
+Millie Bobby Brown,February 19, 2004
+Noah Schnapp,October 3, 2004
+Sadie Sink,April 16, 2002
+Gaten Matarazzo,September 8, 2002
+Caleb McLaughlin,October 13, 2001
+Finn Wolfhard,December 23, 2002
+Robert De Niro,August 17, 1943
+Al Pacino,April 25, 1940
+Jack Nicholson,April 22, 1937
+Clint Eastwood,May 31, 1930
+Anthony Hopkins,December 31, 1937
+Morgan Freeman,June 1, 1937
+Ian McKellen,May 25, 1939
+Maggie Smith,December 28, 1934
+Judi Dench,December 9, 1934
+Helen Mirren,July 26, 1945
+Christopher Walken,March 31, 1943
+Jeff Bridges,December 4, 1949
+Sam Elliott,August 9, 1944
+Tommy Lee Jones,September 15, 1946
+Dustin Hoffman,August 8, 1937
+Gene Hackman,January 30, 1930
+Diane Keaton,January 5, 1946
+Jane Fonda,December 21, 1937
+Lily Tomlin,September 1, 1939
+Sissy Spacek,December 25, 1949
+Jessica Lange,April 20, 1949
+Sally Field,November 6, 1946
+Sigourney Weaver,October 8, 1949
+Glenn Close,March 19, 1947
+Susan Sarandon,October 4, 1946
+Meryl Streep,June 22, 1949
+Whoopi Goldberg,November 13, 1955
+Cher,May 20, 1946
+Barbra Streisand,April 24, 1942
+Tina Turner,November 26, 1939
+Aretha Franklin,March 25, 1942
+Celine Dion,March 30, 1968
+Whitney Houston,August 9, 1963
+Stevie Wonder,May 13, 1950
+Prince,June 7, 1958
+Bob Dylan,May 24, 1941
+Bruce Springsteen,September 23, 1949
+Billy Joel,May 9, 1949
+Neil Young,November 12, 1945
+David Gilmour,March 6, 1946
+Roger Waters,September 6, 1943
+Jimmy Page,January 9, 1944
+Robert Plant,August 20, 1948
+Keith Richards,December 18, 1943
+Mick Jagger,July 26, 1943
+Eric Clapton,March 30, 1945
+Bono,May 10, 1960
+Sting,October 2, 1951
+Phil Collins,January 30, 1951
+George Michael,June 25, 1963
+Michael Bolton,February 26, 1953
+Lionel Richie,June 20, 1949
+Mariah Carey,March 27, 1969
+Janet Jackson,May 16, 1966
+Jennifer Lopez,July 24, 1969
+Shakira,February 2, 1977
+Christina Aguilera,December 18, 1980
+Britney Spears,December 2, 1981
+Alicia Keys,January 25, 1981
+Pink,September 8, 1979
+Kelly Clarkson,April 24, 1982
+Avril Lavigne,September 27, 1984
+Miley Cyrus,November 23, 1992
+Demi Lovato,August 20, 1992
+Nicki Minaj,December 8, 1982
+Cardi B,October 11, 1992
+Megan Thee Stallion,February 15, 1995
