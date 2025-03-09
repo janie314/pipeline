@@ -1,9 +1,9 @@
-from typing import List
 import structlog
 import polars as pl
 from query import Query
 
 log = structlog.get_logger()
+
 
 class Customers(Query):
     def run(self):

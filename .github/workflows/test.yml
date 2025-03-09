@@ -17,9 +17,12 @@ jobs:
       uses: astral-sh/setup-uv@v5
       with:
         enable-cache: true
-    - name: check formatting
+    - name: lint the code
       run: |
-        uv run black . --check
+        uv run ruff check
+    - name: check the code's formatting
+      run: |
+        uv run ruff format --check
     - name: check for TODOs
       run: |
         git ls-files frontend backend | xargs grep -Ii todo | wc -l | xargs ruby -e 'exit ARGV[0].to_i == 0'
