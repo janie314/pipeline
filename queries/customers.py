@@ -5,6 +5,7 @@ from query import Query
 
 log = structlog.get_logger()
 
+
 class Customers(Query):
     def run(self):
         try:

@@ -4,8 +4,9 @@ from typing import List
 
 log = structlog.get_logger()
 
+
 class Query:
-    def __init__(self, dependencies: List['Query']):
+    def __init__(self, dependencies: List["Query"]):
         self.dependencies = dependencies
 
     def run(self):
