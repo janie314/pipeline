@@ -3,10 +3,16 @@ from queries.customers import customers
 from query import Query
 from polars import col as C
 
+
 def customers_bdays_collated_query(dependency_results):
     [birthdays_res, customers_res] = dependency_results
-    return birthdays_res.join_where(
-        customers_res, C("Subscription Date").dt.month().eq(C("Birth Date").dt.day())
+    return birthdays_res.with_columns(
+        C("Birth Date").dt.strftime("%m-%d").alias("birthday")
+    ).join(
+        customers_res.with_columns(
+            C("Subscription Date").dt.strftime("%m-%d").alias("birthday")
+        ),
+        on="birthday"
     )
 
 
