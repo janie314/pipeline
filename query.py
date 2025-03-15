@@ -19,4 +19,7 @@ class Query:
         outpath = os.path.join("data", f"{self.name}.parquet")
         log.info(f"writing query results to {outpath}")
         df.write_parquet(outpath)
+        outpath = os.path.join("data", f"{self.name}.csv")
+        log.info(f"writing query results to {outpath}")
+        df.write_csv(outpath)
         return df

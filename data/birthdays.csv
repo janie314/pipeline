@@ -1,0 +1,285 @@
+Name,Birth Date
+Tom Cruise,1962-07-03
+Nicole Kidman,1967-06-20
+Brad Pitt,1963-12-18
+Angelina Jolie,1975-06-04
+Leonardo DiCaprio,1974-11-11
+Meryl Streep,1949-06-22
+Denzel Washington,1954-12-28
+Julia Roberts,1967-10-28
+George Clooney,1961-05-06
+Scarlett Johansson,1984-11-22
+Robert Downey Jr.,1965-04-04
+Jennifer Aniston,1969-02-11
+Johnny Depp,1963-06-09
+Charlize Theron,1975-08-07
+Will Smith,1968-09-25
+Natalie Portman,1981-06-09
+Ryan Reynolds,1976-10-23
+Emma Stone,1988-11-06
+Chris Hemsworth,1983-08-11
+Margot Robbie,1990-07-02
+Dwayne Johnson,1972-05-02
+Gal Gadot,1985-04-30
+Idris Elba,1972-09-06
+Viola Davis,1965-08-11
+Keanu Reeves,1964-09-02
+Sandra Bullock,1964-07-26
+Hugh Jackman,1968-10-12
+Cate Blanchett,1969-05-14
+Daniel Craig,1968-03-02
+Rachel McAdams,1978-11-17
+Benedict Cumberbatch,1976-07-19
+Emily Blunt,1983-02-23
+Tom Hanks,1956-07-09
+Oprah Winfrey,1954-01-29
+Harrison Ford,1942-07-13
+Steven Spielberg,1946-12-18
+Paul McCartney,1942-06-18
+Ringo Starr,1940-07-07
+Elton John,1947-03-25
+Madonna,1958-08-16
+Michael Jackson,1958-08-29
+Elvis Presley,1935-01-08
+David Bowie,1947-01-08
+Freddie Mercury,1946-09-05
+Beyoncé,1981-09-04
+Taylor Swift,1989-12-13
+Lady Gaga,1986-03-28
+Adele,1988-05-05
+Justin Bieber,1994-03-01
+Selena Gomez,1992-07-22
+Ariana Grande,1993-06-26
+Drake,1986-10-24
+Kanye West,1977-06-08
+Jay-Z,1969-12-04
+Rihanna,1988-02-20
+Ed Sheeran,1991-02-17
+Harry Styles,1994-02-01
+Zendaya,1996-09-01
+Timothée Chalamet,1995-12-27
+Florence Pugh,1996-01-03
+Saoirse Ronan,1994-04-12
+Austin Butler,1991-08-17
+Jacob Elordi,1997-06-26
+Jenna Ortega,2002-09-27
+Pedro Pascal,1975-04-02
+Bella Ramsey,2003-09-30
+Millie Bobby Brown,2004-02-19
+Noah Schnapp,2004-10-03
+Sadie Sink,2002-04-16
+Gaten Matarazzo,2002-09-08
+Caleb McLaughlin,2001-10-13
+Finn Wolfhard,2002-12-23
+Robert De Niro,1943-08-17
+Al Pacino,1940-04-25
+Jack Nicholson,1937-04-22
+Clint Eastwood,1930-05-31
+Anthony Hopkins,1937-12-31
+Morgan Freeman,1937-06-01
+Ian McKellen,1939-05-25
+Maggie Smith,1934-12-28
+Judi Dench,1934-12-09
+Helen Mirren,1945-07-26
+Christopher Walken,1943-03-31
+Jeff Bridges,1949-12-04
+Sam Elliott,1944-08-09
+Tommy Lee Jones,1946-09-15
+Dustin Hoffman,1937-08-08
+Gene Hackman,1930-01-30
+Diane Keaton,1946-01-05
+Jane Fonda,1937-12-21
+Lily Tomlin,1939-09-01
+Sissy Spacek,1949-12-25
+Jessica Lange,1949-04-20
+Sally Field,1946-11-06
+Sigourney Weaver,1949-10-08
+Glenn Close,1947-03-19
+Susan Sarandon,1946-10-04
+Meryl Streep,1949-06-22
+Whoopi Goldberg,1955-11-13
+Cher,1946-05-20
+Barbra Streisand,1942-04-24
+Tina Turner,1939-11-26
+Aretha Franklin,1942-03-25
+Celine Dion,1968-03-30
+Whitney Houston,1963-08-09
+Stevie Wonder,1950-05-13
+Prince,1958-06-07
+Bob Dylan,1941-05-24
+Bruce Springsteen,1949-09-23
+Billy Joel,1949-05-09
+Neil Young,1945-11-12
+David Gilmour,1946-03-06
+Roger Waters,1943-09-06
+Jimmy Page,1944-01-09
+Robert Plant,1948-08-20
+Keith Richards,1943-12-18
+Mick Jagger,1943-07-26
+Eric Clapton,1945-03-30
+Bono,1960-05-10
+Sting,1951-10-02
+Phil Collins,1951-01-30
+George Michael,1963-06-25
+Michael Bolton,1953-02-26
+Lionel Richie,1949-06-20
+Mariah Carey,1969-03-27
+Janet Jackson,1966-05-16
+Jennifer Lopez,1969-07-24
+Shakira,1977-02-02
+Christina Aguilera,1980-12-18
+Britney Spears,1981-12-02
+Alicia Keys,1981-01-25
+Pink,1979-09-08
+Kelly Clarkson,1982-04-24
+Avril Lavigne,1984-09-27
+Katy Perry,1984-10-25
+Miley Cyrus,1992-11-23
+Demi Lovato,1992-08-20
+Nicki Minaj,1982-12-08
+Cardi B,1992-10-11
+Megan Thee Stallion,1995-02-15
+Doja Cat,1995-10-21
+Billie Eilish,2001-12-18
+Olivia Rodrigo,2003-02-20
+Lil Nas X,1999-04-09
+Name,
+Tom Cruise,1962-07-03
+Nicole Kidman,1967-06-20
+Brad Pitt,1963-12-18
+Angelina Jolie,1975-06-04
+Leonardo DiCaprio,1974-11-11
+Meryl Streep,1949-06-22
+Denzel Washington,1954-12-28
+Julia Roberts,1967-10-28
+George Clooney,1961-05-06
+Scarlett Johansson,1984-11-22
+Robert Downey Jr.,1965-04-04
+Jennifer Aniston,1969-02-11
+Johnny Depp,1963-06-09
+Charlize Theron,1975-08-07
+Will Smith,1968-09-25
+Natalie Portman,1981-06-09
+Ryan Reynolds,1976-10-23
+Emma Stone,1988-11-06
+Chris Hemsworth,1983-08-11
+Margot Robbie,1990-07-02
+Dwayne Johnson,1972-05-02
+Gal Gadot,1985-04-30
+Idris Elba,1972-09-06
+Viola Davis,1965-08-11
+Keanu Reeves,1964-09-02
+Sandra Bullock,1964-07-26
+Hugh Jackman,1968-10-12
+Cate Blanchett,1969-05-14
+Daniel Craig,1968-03-02
+Rachel McAdams,1978-11-17
+Benedict Cumberbatch,1976-07-19
+Emily Blunt,1983-02-23
+Tom Hanks,1956-07-09
+Oprah Winfrey,1954-01-29
+Harrison Ford,1942-07-13
+Steven Spielberg,1946-12-18
+Paul McCartney,1942-06-18
+Ringo Starr,1940-07-07
+Elton John,1947-03-25
+Madonna,1958-08-16
+Michael Jackson,1958-08-29
+Elvis Presley,1935-01-08
+David Bowie,1947-01-08
+Freddie Mercury,1946-09-05
+Beyoncé,1981-09-04
+Taylor Swift,1989-12-13
+Lady Gaga,1986-03-28
+Adele,1988-05-05
+Justin Bieber,1994-03-01
+Selena Gomez,1992-07-22
+Ariana Grande,1993-06-26
+Drake,1986-10-24
+Kanye West,1977-06-08
+Jay-Z,1969-12-04
+Rihanna,1988-02-20
+Ed Sheeran,1991-02-17
+Harry Styles,1994-02-01
+Zendaya,1996-09-01
+Timothée Chalamet,1995-12-27
+Florence Pugh,1996-01-03
+Saoirse Ronan,1994-04-12
+Austin Butler,1991-08-17
+Jacob Elordi,1997-06-26
+Jenna Ortega,2002-09-27
+Pedro Pascal,1975-04-02
+Bella Ramsey,2003-09-30
+Millie Bobby Brown,2004-02-19
+Noah Schnapp,2004-10-03
+Sadie Sink,2002-04-16
+Gaten Matarazzo,2002-09-08
+Caleb McLaughlin,2001-10-13
+Finn Wolfhard,2002-12-23
+Robert De Niro,1943-08-17
+Al Pacino,1940-04-25
+Jack Nicholson,1937-04-22
+Clint Eastwood,1930-05-31
+Anthony Hopkins,1937-12-31
+Morgan Freeman,1937-06-01
+Ian McKellen,1939-05-25
+Maggie Smith,1934-12-28
+Judi Dench,1934-12-09
+Helen Mirren,1945-07-26
+Christopher Walken,1943-03-31
+Jeff Bridges,1949-12-04
+Sam Elliott,1944-08-09
+Tommy Lee Jones,1946-09-15
+Dustin Hoffman,1937-08-08
+Gene Hackman,1930-01-30
+Diane Keaton,1946-01-05
+Jane Fonda,1937-12-21
+Lily Tomlin,1939-09-01
+Sissy Spacek,1949-12-25
+Jessica Lange,1949-04-20
+Sally Field,1946-11-06
+Sigourney Weaver,1949-10-08
+Glenn Close,1947-03-19
+Susan Sarandon,1946-10-04
+Meryl Streep,1949-06-22
+Whoopi Goldberg,1955-11-13
+Cher,1946-05-20
+Barbra Streisand,1942-04-24
+Tina Turner,1939-11-26
+Aretha Franklin,1942-03-25
+Celine Dion,1968-03-30
+Whitney Houston,1963-08-09
+Stevie Wonder,1950-05-13
+Prince,1958-06-07
+Bob Dylan,1941-05-24
+Bruce Springsteen,1949-09-23
+Billy Joel,1949-05-09
+Neil Young,1945-11-12
+David Gilmour,1946-03-06
+Roger Waters,1943-09-06
+Jimmy Page,1944-01-09
+Robert Plant,1948-08-20
+Keith Richards,1943-12-18
+Mick Jagger,1943-07-26
+Eric Clapton,1945-03-30
+Bono,1960-05-10
+Sting,1951-10-02
+Phil Collins,1951-01-30
+George Michael,1963-06-25
+Michael Bolton,1953-02-26
+Lionel Richie,1949-06-20
+Mariah Carey,1969-03-27
+Janet Jackson,1966-05-16
+Jennifer Lopez,1969-07-24
+Shakira,1977-02-02
+Christina Aguilera,1980-12-18
+Britney Spears,1981-12-02
+Alicia Keys,1981-01-25
+Pink,1979-09-08
+Kelly Clarkson,1982-04-24
+Avril Lavigne,1984-09-27
+Miley Cyrus,1992-11-23
+Demi Lovato,1992-08-20
+Nicki Minaj,1982-12-08
+Cardi B,1992-10-11
+Megan Thee Stallion,1995-02-15
