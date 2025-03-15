@@ -12,7 +12,7 @@ def customers_bdays_collated_query(dependency_results):
         customers_res.with_columns(
             C("Subscription Date").dt.strftime("%m-%d").alias("birthday")
         ),
-        on="birthday"
+        on="birthday",
     )
 
 
